@@ -52,4 +52,16 @@ const productSchema = mongoose.Schema({
     }
 })
 
+// this 2 are used to create a virtual field called "id" from "_id"
+
+// productSchema.virtual('id').get(function() {
+//     return this._id.toHexString()
+// })
+
+// productSchema.set('toJSON',{
+//     virtuals: true
+// })
+
+
+
 exports.Product = mongoose.model('Product', productSchema);
